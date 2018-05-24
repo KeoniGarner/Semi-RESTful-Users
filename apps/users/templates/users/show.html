@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Users</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/css/style.css' %}">
+</head>
+<body>
+    <h1>User {{ id }}</h1>
+    <p><strong>Full Name:</strong> {{ first_name }} {{ last_name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Created At:</strong> {{ created_at }}</p>
+    <a href="/users/{{ id }}/edit/">Edit</a> | <a href="/users/{{ id }}/destroy/">Delete</a>
+</body>
+</html>
